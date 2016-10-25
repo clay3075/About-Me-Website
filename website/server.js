@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/send_email', function (req, res) {
+app.post('/send_email', function (req, res) {
   res.send('Sending!');
 });
 
