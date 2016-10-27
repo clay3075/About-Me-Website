@@ -15,6 +15,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<link rel="stylesheet" href="js/jqwidgets-ver4.3.0/jqwidgets/styles/jqx.base.css" type="text/css" />
+		<link rel="stylesheet" href="js/jqwidgets-ver4.3.0/jqwidgets/styles/jqx.summer.css" type="text/css" />
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/scripts/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxcore.js"></script>
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxbuttons.js"></script>
@@ -27,6 +28,7 @@
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxeditor.js"></script>
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxtooltip.js"></script>
 		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxcheckbox.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxvalidator.js"></script>
 		<script type="text/javascript" src="js/textarea.js"></script>
 	</head>
 	<body class="loading">
@@ -39,35 +41,35 @@
 					<header id='info_header'>
 						<h1>Send Email</h1>
 						<center>
-						<form name="contactform" method="post" action="send_email">
+						<form id="contactform" method="post" action="send_email">
  
-							<table width="450px">
+							<table width="50%">
 							 
 								<tr>
 								 <td valign="top">
 								   <center>
-								     <input  type="text" name="first_name" maxlength="50" size="30" placeholder="First Name">
+								     <input  type="text" id="first_name" maxlength="50" size="30" placeholder="First Name">
 								   </center>
 								 </td>
 								</tr>
 								<tr>
 								 <td valign="top">
 								   <center>
-								     <input type="text" name="last_name" maxlength="50" size="30" placeholder="Last Name">
+								     <input type="text" id="last_name" maxlength="50" size="30" placeholder="Last Name">
 								   </center>
 								 </td>
 								</tr>
 								<tr>
 								 <td valign="top">
 								   <center>
-								     <input type="text" name="email" maxlength="80" size="30" placeholder="Email Address">
+								     <input type="text" id="email" maxlength="80" size="30" placeholder="Email Address">
 								   </center>
 								 </td>
 								</tr>
 								<tr>
 								 <td valign="top">
 								   <center>
-								     <input  type="text" name="telephone" maxlength="30" size="30" placeholder="Phone Number">
+								     <input  type="text" id="telephone" maxlength="30" size="30" placeholder="Phone Number">
 								   </center>
 							  	</td> 
 								</tr>
