@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 })); 
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/js', express.static(path.join(__dirname, 'public/assets/js')));
 
 app.get('/', function (req, res) {
   res.send('Hello World!');

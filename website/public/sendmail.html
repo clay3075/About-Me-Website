@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <!--
 	Aerial by HTML5 UP
-	html5up.net | @ajlkn
+	html5up.net | @ajlkn 
+	modified    | @clayreddick
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
@@ -13,6 +14,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" href="js/jqwidgets-ver4.3.0/jqwidgets/styles/jqx.base.css" type="text/css" />
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/scripts/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxcore.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxbuttons.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxscrollbar.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxlistbox.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxdropdownlist.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxdropdownbutton.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxcolorpicker.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxwindow.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxeditor.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxtooltip.js"></script>
+		<script type="text/javascript" src="js/jqwidgets-ver4.3.0/jqwidgets/jqxcheckbox.js"></script>
+		<script type="text/javascript" src="js/textarea.js"></script>
 	</head>
 	<body class="loading">
 		<div id="wrapper">
@@ -29,93 +44,46 @@
 							<table width="450px">
 							 
 								<tr>
-								 
 								 <td valign="top">
-								 
-								  <label for="first_name">First Name *</label>
-								 
+								   <center>
+								     <input  type="text" name="first_name" maxlength="50" size="30" placeholder="First Name">
+								   </center>
 								 </td>
-								 <!-- <br> -->
-								 <td valign="top">
-								 
-								  <input  type="text" name="first_name" maxlength="50" size="30">
-								 
-								 </td>
-								 
 								</tr>
-								 <!-- <br> -->
 								<tr>
-								 
-								 <td valign="top"">
-								 
-								  <label for="last_name">Last Name *</label>
-								 
-								 </td>
-								 <!-- <br> -->
 								 <td valign="top">
-								 
-								  <input  type="text" name="last_name" maxlength="50" size="30">
-								 
+								   <center>
+								     <input type="text" name="last_name" maxlength="50" size="30" placeholder="Last Name">
+								   </center>
 								 </td>
-								 
 								</tr>
-								<!-- <br> -->
 								<tr>
-								 
 								 <td valign="top">
-								 
-								  <label for="email">Email Address *</label>
-								 
+								   <center>
+								     <input type="text" name="email" maxlength="80" size="30" placeholder="Email Address">
+								   </center>
 								 </td>
-								 <!-- <br> -->
-								 <td valign="top">
-								 
-								  <input  type="text" name="email" maxlength="80" size="30">
-								 
-								 </td>
-								 
 								</tr>
-								<!-- <br> -->
 								<tr>
-								 
 								 <td valign="top">
-								 
-								  <label for="telephone">Telephone Number</label>
-								 
-								 </td>
-								 <!-- <br> -->
-								 <td valign="top">
-								 
-								  <input  type="text" name="telephone" maxlength="30" size="30">
-								 
-								 </td>
-								 
+								   <center>
+								     <input  type="text" name="telephone" maxlength="30" size="30" placeholder="Phone Number">
+								   </center>
+							  	</td> 
 								</tr>
-								<!-- <br> -->
 								<tr>
-								 
 								 <td valign="top">
-								 
-								  <label for="comments">Comments *</label>
-								 
+								   <center>
+								     <textarea id='editor' height='200px'></textarea>
+								   </center>
 								 </td>
-								 <!-- <br> -->
-								 <td valign="top">
-								 
-								  <textarea  name="comments" maxlength="1000" cols="35" rows="3"></textarea>
-								 
-								 </td>
-								 
 								</tr>
-								<!-- <br> -->
 								<tr>
-								 
 								 <td colspan="2" style="text-align:center">
-								 
-								  <input style="width:6em;" type="submit" value="Send">   
-								 
+								   <center>
+								     <input style="width:6em;" type="submit" value="Send">   
+								   </center>
 								 </td>
-								 
 								</tr>
 							 
 							</table>
