@@ -545,7 +545,16 @@
 			font-size: 2em;
 			color: white;
 		}
-	
+
+	#infotitle {
+		font-size: 4.35em;
+		font-weight: 900;
+		letter-spacing: -0.035em;
+		line-height: 1em;
+		color: white;
+		padding-bottom: 3%;
+	}
+
 	#header {
 		-moz-animation: header 1s 2.25s forwards;
 		-webkit-animation: header 1s 2.25s forwards;
@@ -822,6 +831,7 @@
 		#bg {
 			background-size: 1500px auto;
 			width: 4500px;
+			z-index: -9999;
 		} }
 
 /* Normal */

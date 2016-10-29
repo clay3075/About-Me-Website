@@ -12,31 +12,51 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/js/jqwidgets-ver4.3.0/jqwidgets/styles/jqx.base.css" type="text/css" />
+	    	<script type="text/javascript" src="assets/js/jqwidgets-ver4.3.0/scripts/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/jqwidgets-ver4.3.0/jqwidgets/jqxcore.js"></script>
+		<script type="text/javascript" src="assets/js/jqwidgets-ver4.3.0/jqwidgets/jqxtabs.js"></script>
+		<script type="text/javascript" src="assets/js/infotabs.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body class="loading">
 		<div id="wrapper">
 			<div id="bg"></div>
-			<!-- <div id="overlay"></div> -->
-			<div id="main">
+			<center>	
+				<div id='infotitle'>Biography</div>
+				<div id='infotabs'>
+					<ul style='margin-left: 20px;'>
+						<li>Biography</li>
+						<li>Resume</li>
+						<!--<li>Tab 3</li>-->
+						<!--<li>Tab 4</li>-->
+						<!--<li>Tab 5</li>-->
+					</ul>
+					<div>
+						Content 1
+					</div>
+					<div>
+						Content 2
+					</div>
+					<!--<div>-->
+					<!--Content 3-->
+					<!--</div>-->
+					<!--<div>-->
+					<!--Content 4-->
+					<!--</div>-->
+					<!--<div>-->
+					<!--Content 5-->
+					<!--</div>-->
+				</div>
+			</center>
+		</div>
 
-				<!-- Header -->
-					<header id='info_header'>
-						<h1>Biography</h1>
-						<p>Words about me</p>
-						<br>
-						<a href="resume.html">Resume</a>
-					</header>
+		<!--[> Footer <]-->
+		<footer id="footer">
+			<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+		</footer>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
-
-			</div>
-		<!-- </div> -->
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script>
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
