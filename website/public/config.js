@@ -1,0 +1,1 @@
+IDRViewer.config = {"pagecount":1,"title":"","author":"Clay Reddick","fileName":"Resume__2_.pdf","bounds":[[935,1210]],"bookmarks":[],"thumbnailType":"jpg","pageType":"html","pageLabels":[]};
