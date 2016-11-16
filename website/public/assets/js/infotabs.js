@@ -1,14 +1,17 @@
 $(document).ready(function () {
 	//create infotabs.
-	$('#infotabs').jqxTabs({ width: $(document).width() * .55, height: $(document).width() * .4 });
+	$('#infotabs').jqxTabs({ width: $(document).width() * .50, height: $(document).width() * .3 });
 	$('#infotabs').bind('selected', function (event) {
 		var item = event.args.item;
 		var title = $('#infotabs').jqxTabs('getTitleAt', item);
 		$('#infotitle').text(title);
 		//make resume printable
 		if (title == 'Resume') {
-			$('.printable') 
-			  .append('<center><button id="print-button">Print</button></center>').click(print); // Create the element  
+			//$('#p1').width($('.jqx-tabs-content-element').width()).height($('.jqx-tabs-content-element').height());
+			$('#print-button') 
+			  .show(); // Create the element  
+		} else {
+			$('#print-button').hide();
 		}
 	});
 
@@ -17,5 +20,7 @@ $(document).ready(function () {
 });
 
 function print() {
-	alert('printing');
+	var temp = window.open('resume.html');
+	temp.print();
+	setTimeout(function() {temp.close();},100);
 }
