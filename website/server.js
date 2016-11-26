@@ -5,9 +5,7 @@ var path = require('path');
 
 //serve basic page to choose between different website options
 app.use(express.static(path.join(__dirname)));
-// app.get('/', function (req, res) {
-//   res.send('index.html');
-// });
+
 
 //for about-me-website portion
 var bodyParser = require('body-parser')
