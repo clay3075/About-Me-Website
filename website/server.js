@@ -3,29 +3,43 @@ var app = express();
 
 var path = require('path');
 
+//serve basic page to choose between different website options
+app.use(express.static(path.join(__dirname)));
+// app.get('/', function (req, res) {
+//   res.send('index.html');
+// });
+
+//for about-me-website portion
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 	  extended: true
 })); 
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/js', express.static(path.join(__dirname, 'public/assets/js')));
+app.use(express.static(path.join(__dirname, 'publicAboutMe')));
+// app.use('/js', express.static(path.join(__dirname, 'publicAboutMe/assets/js'))); //may need later
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+//end about-me-website portion
 
-app.post('/send_email', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public/sendmail.html'));
-  var message = '';
-  message += 'First Name: ' + req.body.first_name + '\n';
-  message += 'Last Name: ' + req.body.last_name + '\n';
-  message += 'Email: ' + req.body.email + '\n';
-  message += 'Phone: ' + req.body.telephone + '\n\n';
-  message += 'Message: ' + req.body.telephone;
-  console.log(message);
-});
+//for wedding website portion
+app.use(express.static(path.join(__dirname, 'publicWedding')));
+app.use(express.static(path.join(__dirname, 'publicWedding/images/Cruise 2016')));
+app.use(express.static(path.join(__dirname, 'publicWedding/images/Engagement Gallery')));
+app.use(express.static(path.join(__dirname, 'publicWedding/images/Through The Years Gallery')));
+app.get('/publicWedding/getGallery', function (req, res) {
+    //read folder paths and send them back as json
+	const testFolder = req.query.path;
+	const fs = require('fs');
+	var files = [];
+	fs.readdir(testFolder, (err, files) => {
+		for (index = 0; index < files.length; index++) {
+			files[index] = path.join(testFolder.slice(1), files[index]);
+		};
+	  	res.send(files);
+	})
+})
+
+//end wedding website portion
 
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
