@@ -1,0 +1,16 @@
+.guestListTable {
+	font-size: 2em;
+	border-collapse: collapse;
+}
+
+.guestListTable td, th {
+	text-align: center;
+}
+
+.nameWidth {
+	width: 50em;
+}
+
+.countWidth {
+	width: 2.5em;
+}
