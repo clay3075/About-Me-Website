@@ -1,9 +1,11 @@
 //rsvp
 //send request to add name to the database
 function rsvp() {
-	$.get('rsvp', {first: $('#firstName').val(), last: $('#lastName').val()});
-	$('#firstName').val('')
-	$('#lastName').val('')
+	if ($('#firstName').val().trim() != '' && $('#lastName').val().trim() != '') {
+		$.get('rsvp', {first: $('#firstName').val(), last: $('#lastName').val()});
+		$('#firstName').val('')
+		$('#lastName').val('')
+	}
 }
 
 ;(function () {
