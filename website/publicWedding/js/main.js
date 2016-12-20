@@ -1,3 +1,18 @@
+//check if mobile
+var isMobile = { 
+	Android: function() { return navigator.userAgent.match(/Android/i); }, 
+	BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); }, 
+	iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, 
+	Opera: function() { return navigator.userAgent.match(/Opera Mini/i); }, 
+	Windows: function() { return navigator.userAgent.match(/IEMobile/i); }, 
+	any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } 
+};
+$(document).ready(function() {
+	if (isMobile.any()) {
+		$('#navigation').remove();
+	}
+});
+
 //rsvp
 //send request to add name to the database
 function rsvp() {
@@ -30,7 +45,8 @@ function rsvp() {
 	var offcanvasMenu = function() {
 
 		$('#page').prepend('<div id="fh5co-offcanvas" />');
-		$('#page').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>');
+		if (!isMobile.any())
+			$('#page').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white"><i></i></a>');
 		var clone1 = $('.menu-1 > ul').clone();
 		$('#fh5co-offcanvas').append(clone1);
 		var clone2 = $('.menu-2 > ul').clone();
